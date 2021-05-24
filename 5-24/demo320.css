@@ -1,0 +1,10 @@
+   div{
+            width: 50%;
+            height: 50px;
+        }
+        div:nth-child(1){
+            background-color: brown;
+        }
+        div:nth-child(2){
+            background-color: blueviolet;
+        }
