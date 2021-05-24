@@ -1,4 +1,36 @@
-div {
-  background-color: red;
-  color: green;
+div:frst {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  color: yellow;
+  font-size: 18px;
+}
+p {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  font-size: 15px;
+}
+#header {
+  width: 100px;
+  height: 100px;
+}
+#header .nav {
+  height: 50px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+}
+.sign {
+  background-color: green;
+  height: 50px;
+}
+.sign::before {
+  content: "aaa";
+  color: purple;
+}
+.sign::after {
+  content: "bbb";
+  color: brown;
 }

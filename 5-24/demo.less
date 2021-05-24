@@ -1,6 +1,44 @@
-@background-color:red;
-@color:green;
-div{
+// @background-color1:red;
+@background-color:green;
+@font18:18px;
+@font15:15px;
+@color:yellow;
+div:frst{
+  width: 200px;
+  height: 200px;
   background-color:@background-color;
   color: @color;
+  font-size: @font18;
+}
+p{
+  width: 100px;
+  height: 100px;
+  background-color: @background-color;
+  font-size: @font15;
+}
+#header{
+  // background-color: @background-color;
+  width: 100px;
+  height: 100px;
+  .nav{
+    height: 50px;
+    font-size: 20px;
+  }
+}
+a{
+  text-decoration: none;
+}
+
+
+.sign{
+  background-color: @background-color;
+  height: 50px;
+  &::before{
+    content: "aaa";
+    color: purple;
+  }
+  &::after{
+    content: "bbb";
+    color:brown;
+  }
 }
