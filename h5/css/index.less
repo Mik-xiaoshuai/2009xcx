@@ -1,0 +1,360 @@
+//引用common文件
+@import "common";
+@baseFoot:50;
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 15rem;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    min-width: 320px;  //最小手机屏幕尺寸为320px
+    line-height: 1.5;  //子元素行高， 子元素字体大小
+    font-family: Arial, Helvetica,STHeiTi, sans-serif;
+    background: #f2f2f2;
+}
+.header{
+    width: 15rem;
+    height: (90rem / @baseFoot);
+    // background-color: green;
+    line-height: (90rem / @baseFoot);
+    display: flex;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 24px;
+    .header_bg{
+        width: 15rem;
+        height: (90rem / @baseFoot);
+        z-index: -1;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .tip{
+        z-index: 2;
+        top: (10rem / @baseFoot);
+        left: (20rem / @baseFoot);
+        width: (65rem / @baseFoot);
+        position: absolute;
+        img{
+            width: (35rem / @baseFoot);
+            height: (33rem / @baseFoot);
+        }
+    }
+    .logo{
+        z-index: 2;
+        top: 0;
+        left: (65rem / @baseFoot);
+        top: (13rem / @baseFoot);
+        width: (90rem / @baseFoot);
+        position: absolute;
+       img{
+            width: (73rem / @baseFoot);
+            height: (65rem / @baseFoot);
+       }
+    }
+    .tip_content{
+        z-index: 2;
+        top: 0;
+        left: (154rem / @baseFoot);
+        width: (422rem / @baseFoot);
+        position: absolute;
+        font-size: (24rem / @baseFoot);
+    }
+    .now_open{
+        z-index: 2;
+        top: 0;
+        left: (583rem / @baseFoot);
+        width: (180rem / @baseFoot);
+        position: absolute;
+        font-size: (25rem / @baseFoot);
+    }
+}
+
+
+// 分类和登录
+    .nav{
+        width: 15rem;
+        height: (180rem / @baseFoot);
+        position: relative;
+        // background-color: green;
+        font-size: 28px;
+        .nav_bg{
+            width: 15rem;
+            height: (88rem / @baseFoot);
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+        .nav_fenl{
+            position: absolute;
+            width: 15rem;
+            height: (56rem / @baseFoot);
+            top: (11rem / @baseFoot);
+            left: (33rem / @baseFoot);
+            img{
+                width: (35rem / @baseFoot);
+                height: (55rem / @baseFoot);
+            }
+        }
+        .nav_Dlogo{
+            position: absolute;
+            width: 15rem;
+            height:(68rem / @baseFoot);
+             top: (5rem / @baseFoot);
+            left: (180rem / @baseFoot);
+            img{
+                width: (365rem / @baseFoot);
+                height: (68rem / @baseFoot);
+            }
+        }
+        .nav_login{
+            position: absolute;
+            width: 15rem;
+            height: (56rem / @baseFoot);
+            top: (10rem / @baseFoot);
+            left: (674rem / @baseFoot);
+            img{
+                width: (32rem / @baseFoot);
+                height: (56rem / @baseFoot);
+            }
+        }
+
+        .nav_ipt{
+            width: 15rem;
+            height: (92rem / @baseFoot);
+              background-image: url(../images/粉色背景.jpg);
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            input{
+                width: (634rem / @baseFoot);
+                height: (64rem / @baseFoot);
+                position: absolute;
+                top: (10rem / @baseFoot);
+                left: (25rem / @baseFoot);
+                border-radius: 44px;
+                border: none;
+                padding-left: (60rem / @baseFoot);
+                font-size: (28rem / @baseFoot);
+            }
+            .nav_img{ 
+                z-index: 1;
+                width: 15rem;
+                height: (30rem / @baseFoot);
+                position: absolute;
+                top: (26rem / @baseFoot);
+                left: (45rem / @baseFoot);
+                img{
+                    position: absolute;
+                    width: (30rem / @baseFoot);
+                    height: (30rem / @baseFoot);
+                }
+            }
+        }
+    }
+
+    //导航图
+    .daoh{
+        width: 15rem;
+        height: (229rem / @baseFoot);
+        position: relative;
+        .daoh_bg{
+            width: 15rem;
+            height: (228rem / @baseFoot);
+            img{
+                width: 15rem;
+                height: (229rem / @baseFoot);
+            }
+
+            .daoh_bg2{
+                width: 15rem;
+                height: (228rem / @baseFoot);
+                position: absolute;
+                left: (28rem / @baseFoot);
+                top: 0;
+                img{
+                    border-radius: (24rem / @baseFoot);
+                    width: (693rem / @baseFoot);
+                }
+            }
+        }
+    }
+
+    // 手机电脑和爆款空调
+    .opa{
+        width: 15rem;
+        height: (258rem / @baseFoot);
+        // background-color: red;
+        position: relative;
+        .opa_left{
+            width: 15rem;
+            height: (258rem / @baseFoot);
+            position: absolute;
+            img{
+                width: (250rem / @baseFoot);
+                height: (258rem / @baseFoot);
+            }
+        }
+         .opa_center{
+            width: 15rem;
+            height: (258rem / @baseFoot);
+            position: absolute;
+            left: (250rem / @baseFoot);
+            img{
+                width: (250rem / @baseFoot);
+                height: (258rem / @baseFoot);
+            }
+        }
+         .poa_right{
+            width: 15rem;
+            height: (258rem / @baseFoot);
+            position: absolute;
+            left: (500rem / @baseFoot);
+            img{
+                width: (250rem / @baseFoot);
+                height: (258rem / @baseFoot);
+            }
+        }
+    }
+
+    //秒杀
+    .miaos{
+        width: 15rem;
+        height:(272.62rem / @baseFoot);
+        // background-color: gray;
+        position: relative;
+        font-size: 21px;
+        div{
+            float: left;
+            width: (150rem / @baseFoot);
+            height: (142rem / @baseFoot);
+            position: relative;
+        }
+        img{
+            position: absolute;
+            top: (33rem / @baseFoot);
+            left: (40rem / @baseFoot);
+           width: (61rem / @baseFoot);
+           height: (61rem / @baseFoot);
+        }
+        p{
+            font-size: (21rem / @baseFoot);
+            position: absolute;
+            top: (100rem / @baseFoot);
+            left: (28rem / @baseFoot);
+        }
+    }
+
+    // 新人大礼包
+    .dalib{
+        width: 15rem;
+        height:(234rem / @baseFoot);
+        // background-color: rgb(131, 124, 124);
+        position: relative;
+        padding-top: (55rem / @baseFoot);
+        .dalib_1{
+            width:(352rem / @baseFoot);
+            height: (234rem / @baseFoot);
+            // background-color: aqua;
+            position: absolute;
+            left: 0;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+         .dalib_2{
+            width:(189rem / @baseFoot);
+            height: (234rem / @baseFoot);
+            // background-color: aqua;
+            position: absolute;
+            left: (355rem / @baseFoot);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+         .dalib_3{
+            width:(186rem / @baseFoot);
+            height: (234rem / @baseFoot);
+            // background-color: aqua;
+            position: absolute;
+            left: (547rem / @baseFoot);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+    // 限时秒杀
+    .ms{
+        width: (716rem / @baseFoot);
+        height: (707rem / @baseFoot);
+        background-color: red;
+        // padding-left: (8rem / @baseFoot);
+        margin-left: (17rem / @baseFoot);
+
+
+        .ms_xians{
+            width: (716rem / @baseFoot);
+            height: (289rem / @baseFoot);
+            background-color: gold;
+            position: relative;
+            .ms_xians_left{
+                width: (357rem / @baseFoot);
+                height: (289rem / @baseFoot);
+                background-color: green;
+                position: absolute;
+                border-right: 1px solid #f4f4f4;
+                h3{
+                    font-size:(26rem / @baseFoot);
+                    color: #2d2d2d;
+                    position: absolute;
+                    top: (15rem / @baseFoot);
+                    left: (25rem / @baseFoot);
+                }
+                div{
+                   font-size:(16rem / @baseFoot);
+                    color: #232422;
+                    // position: absolute;
+                    // top: (20rem / @baseFoot);
+                    // left: (157rem / @baseFoot);
+                }
+                p{
+                    font-size:(23rem / @baseFoot);
+                    color: #97989e;
+                }
+                img{
+                    width: (86.4rem / @baseFoot);
+                    height: (86.4rem / @baseFoot);
+                }
+            }
+              .ms_xians_right{
+                width: (358rem / @baseFoot);
+                height: (289rem / @baseFoot);
+                // background-color: green;
+                position: absolute;
+                left: (358rem / @baseFoot);
+            }
+        }
+        .ms_xinp{
+            width: (716rem / @baseFoot);
+            height: (242rem / @baseFoot);
+            background-color: gold;
+        }
+          .ms_tuij{
+            width: (716rem / @baseFoot);
+            height: (176rem / @baseFoot);
+            background-color: gold;
+        }
+    }
