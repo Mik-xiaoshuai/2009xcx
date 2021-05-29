@@ -13,7 +13,8 @@
 
                 <el-form-item label="">
                     <el-input type="password" prefix-icon="el-icon-lock" v-model="form.pass" placeholder="请输入密码"></el-input>
-    
+                </el-form-item>
+
                  <el-form-item label="" class="btns">
                     <el-button type="primary">提交</el-button>
                     <el-button type="info">重置</el-button>
