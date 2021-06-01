@@ -1,0 +1,115 @@
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol{
+    list-style: none;
+}
+body{
+    width: 100%;
+    /* min-width: 320px; */
+    /* max-width: 640px; */
+    margin: 0 auto;
+    font-family: -apple-system, Helvetica,sans-serif;
+    line-height: 1.5;
+    background-color: #f6f6f6;
+}
+.dingb{
+    width: 100%;
+    height: 37px;
+    background-color: rgb(255, 133, 42);
+    display: flex;
+    position: relative;
+}
+.logo{
+    width: 5%;
+    height: 25px;
+    /* background-color: aqua; */
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 6px 9px 6px 42px;
+    background-size: 27px 20px;
+}
+.suo{
+    width: 86%;
+    height: 25px;
+    background-color: rgb(255, 78, 34);
+    position: absolute;
+    left: 42px;
+    border-radius: 4px;
+    position: absolute;
+    top: 6px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    position: relative;
+}
+.suo .img{
+    width: 5%;
+    height: 25px;
+    /* background-color: aqua; */
+    background-image: url(../images/suos_03.gif);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    position: absolute;
+    top: 5px;
+    left: 160px;
+}    
+.suo span{
+    position: absolute;
+    /* width: 20%; */
+    height: 25px;
+    /* background-color: blue; */
+    font-size: 13px;
+    color: rgb(240, 224, 220);
+    line-height:25px ;
+}
+
+
+/* 导航图 */
+.daoh{
+    width: 100%;
+    height: 173px;
+    /* background-color: aqua; */
+    background-image: url(../images/daoh1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* 新品 */
+.xinp{
+    width: 100%;
+    height: 160px;
+    margin-top: 5px;
+}
+.xinp ul li{
+    width: 20%;
+    height: 75px;
+    float: left;
+    margin-top: 2px;
+}
+.xinp ul li img{
+    width: 40px;
+    margin-left: 40px;
+}
+.xinp ul li span{
+    font-size: 6px;
+    margin-left: 37px;
+}
+.xinp ul li .lj{
+    padding-left: 10px;
+}

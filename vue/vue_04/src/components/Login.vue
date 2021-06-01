@@ -6,40 +6,76 @@
                 <img src="../assets/logo.png" alt="">
             </div>
             <!-- 输入框 -->
-            <el-form ref="form" :model="form" label-width="0px" class="loginForm">
-                <el-form-item label="">
+            <el-form ref="loginform" :model="form" :rules="rules" label-width="0px" class="loginForm">
+                <el-form-item label="" prop="name">
                     <el-input prefix-icon="el-icon-user" v-model="form.name" placeholder="请输入用户名"></el-input>
                 </el-form-item>
 
-                <el-form-item label="">
+                <el-form-item label="" prop="pass">
                     <el-input type="password" prefix-icon="el-icon-lock" v-model="form.pass" placeholder="请输入密码"></el-input>
                 </el-form-item>
 
                  <el-form-item label="" class="btns">
-                    <el-button type="primary">提交</el-button>
-                    <el-button type="info">重置</el-button>
+                    <el-button type="primary" @click="submitForm('loginform')">登录</el-button>
+                    <el-button type="info" @click="resetForm('loginform')">重置</el-button>
                 </el-form-item>
-                
+
             </el-form>
         </div>
     </div>
 </template>
 <script>
-
+import { ElMessage } from 'element-plus'
 export default({
     data() {
       return {
         form: {
           name:'',
-          pass:''
+          pass:'',
+        },
+           rules: {
+          name: [
+            { required: true, message: '请输入登录名称', trigger: 'blur' },
+            { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+          ],
+           pass: [
+            { required: true, message: '请输入密码', trigger: 'blur' },
+            { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+          ],
         }
       }
+    },
+    methods:{
+        submitForm(formName){
+             this.$refs[formName].validate((res) => {
+          if (res) {
+                //vue axios  发起网络请求
+                // this.axios.get("/login").then((response) => {
+                //     if(response.data.code=='00000'){
+                //         this.$message.success("登录成功")
+                //         this.$router.push('/home')
+                //     }
+                // })
+                this.$message.success("登录成功")
+                this.$router.push('/home')
+          } else { 
+            console.log("登录失败")
+            this.$message.success("登录失败")
+          }
+        });
+        },
+        resetForm(formName){ 
+            this.$refs[formName].resetFields();
+        }
     }      
 })
 </script>
 
 
-<style lang="less" scoped>
+
+
+
+<style lang="less" scoped> 
     .main_container{
         height:100%;
         background-color: #2b4b6b;

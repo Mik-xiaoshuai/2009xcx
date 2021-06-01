@@ -1,5 +1,11 @@
 module.exports={
     devServer:{
-        open:true
+        open:true,
+        proxy:{
+            '/api':{
+                target:'http://api.lvluo.com',
+                changeOrigon:true,
+            }
+        }
     }
 }

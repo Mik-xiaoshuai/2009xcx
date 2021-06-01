@@ -234,27 +234,28 @@ body{
     border-radius: 20px;
     border: 0;
     background-color: #fff;
-    position: relative;
+    /* position: relative; */
 }
 
 .center .a_right .a_center2 .a_center3{
-    top: 8px;
+    /* top: 8px; */
     width: 90px;
     height: 14px;
-    left: 8px;
+    /* left: 8px; */
     /* background-color: rgb(16, 0, 238); */
     background: url(../images/fdpng.png) no-repeat;
     background-size: 14px 14px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .center .a_right .a_center2 input{
-    position: absolute;
-    left: 30px;
-    top: 8px;
+    width: 100%;
+    /* position: absolute; */
+    /* left: 30px; */
+    /* top: 8px; */
     border: 0px ;
     font-size: 12px;
-    outline: none;
+    /* outline: none; */
 }
 
 .b_center{
