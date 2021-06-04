@@ -3,7 +3,7 @@ module.exports={
         open:true,
         proxy:{
             '/api':{
-                target:'http://api.lvluo.com',
+                target:'http://121.42.230.80',
                 changeOrigon:true,
             }
         }

@@ -11,8 +11,8 @@
                     <el-input prefix-icon="el-icon-user" v-model="form.name" placeholder="请输入用户名"></el-input>
                 </el-form-item>
 
-                <el-form-item label="" prop="pass">
-                    <el-input type="password" prefix-icon="el-icon-lock" v-model="form.pass" placeholder="请输入密码"></el-input>
+                <el-form-item label="" prop="pwd">
+                    <el-input type="password" prefix-icon="el-icon-lock" v-model="form.pwd" placeholder="请输入密码"></el-input>
                 </el-form-item>
 
                  <el-form-item label="" class="btns">
@@ -31,7 +31,7 @@ export default({
       return {
         form: {
           name:'',
-          pass:'',
+          pwd:'',
         },
            rules: {
           name: [
@@ -49,20 +49,20 @@ export default({
         submitForm(formName){
              this.$refs[formName].validate((res) => {
           if (res) {
-                //vue axios  发起网络请求
-                // this.axios.get("/login").then((response) => {
-                //     if(response.data.code=='00000'){
-                //         this.$message.success("登录成功")
-                //         this.$router.push('/home')
-                //     }
-                // })
-                this.$message.success("登录成功")
-                this.$router.push('/home')
-          } else { 
+                this.axios.post('/user/login',this.form).then((response)=>{
+                    // console.log(response.data)
+                    if(response.data.code=='00000'){
+                        //把token存入 sessionStorage
+                        window.sessionStorage.setItem('token',response.data.code);
+                        this.$message.success("登录成功")
+                        this.$router.push('/home')
+                    }
+                })
+            } else { 
             console.log("登录失败")
-            this.$message.success("登录失败")
+            this.$message.error("登录失败")
           }
-        });
+        })
         },
         resetForm(formName){ 
             this.$refs[formName].resetFields();
